@@ -1,0 +1,28 @@
+Test Workout
+
+Bench Press (standard)
+1: 62.5 kg x 13
+2: 62.5 kg x 11
+3: 62.5 kg x 8 F
+
+Weighted Dip (weighted-body-weight)
+1: +20.0 kg x 5
+2: +15.0 kg x 5 D
+3: +10.0 kg x 5 D
+
+Pull-up (reps-only)
+1: 9 reps
+2: 7 reps
+3: 5 reps
+
+Assisted Pull-up (assisted-body-weight)
+1: -55.0 kg x 7
+2: -55.0 kg x 5
+
+Plank (duration-only)
+1: 2:13
+2: 1:47 F
+
+Treadmill Run (cardio)
+1: 1.4 km | 5:13
+
