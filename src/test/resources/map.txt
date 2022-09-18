@@ -1,0 +1,22 @@
+Test Workout
+Bench Press (standard)
+$n62.5x13s
+$n62.5x11s
+$n62.5x8f
+Weighted Dip (weighted-body-weight)
+$w20x5s
+$w15x5d
+$w10x5d
+Pull-up (reps-only)
+$r9s
+$r7s
+$r5s
+Assisted Pull-up (assisted-body-weight)
+$a55x7s
+$a55x5s
+Plank (duration-only)
+$t2:13s
+$t1:47f
+Treadmill Run (cardio)
+$c1.4x5:13s
+%
