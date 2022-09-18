@@ -79,6 +79,7 @@ public class WorkoutProcessor {
         builder.append(line, line.indexOf(_COLON) + 1, line.indexOf(_BAR));
         builder.append(SPLIT);
         builder.append(line, line.indexOf(_BAR) + 3, line.lastIndexOf(_COLON) + 3);
+        builder.append(getSetType(line));
 
         return builder;
     }
@@ -87,6 +88,7 @@ public class WorkoutProcessor {
 
         StringBuilder builder = new StringBuilder(REPS_ONLY);
         builder.append(line, line.indexOf(_COLON) + 1, line.indexOf(_REPS));
+        builder.append(getSetType(line));
 
         return builder;
     }
@@ -95,6 +97,7 @@ public class WorkoutProcessor {
 
         StringBuilder builder = new StringBuilder(TIME_ONLY);
         builder.append(line, line.indexOf(_COLON) + 1, line.lastIndexOf(_COLON) + 3);
+        builder.append(getSetType(line));
 
         return builder;
     }
@@ -122,6 +125,7 @@ public class WorkoutProcessor {
         }
 
         builder.append(line, line.indexOf(_X) + 3, repsEndIndex);
+        builder.append(getSetType(line));
 
         return builder;
     }
