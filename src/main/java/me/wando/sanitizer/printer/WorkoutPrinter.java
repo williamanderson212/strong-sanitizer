@@ -16,7 +16,7 @@ public class WorkoutPrinter {
     public static String printWorkout(String rawWorkout) {
 
         Workout workout = mapWorkout(rawWorkout);
-        StringBuilder builder = new StringBuilder(workout.getTitle() + NEWLINE_);
+        StringBuilder builder = new StringBuilder(workout.getTitle() + NEWLINE_ + NEWLINE_);
 
         for (Exercise exercise : workout.getExercises()) {
 
@@ -53,16 +53,6 @@ public class WorkoutPrinter {
         return printWeightSet((WeightSet) set, setNumber);
     }
 
-    private static String printTimeSet(TimeSet set, int setNumber) {
-
-        StringBuilder builder = new StringBuilder(setNumber + COLON_);
-
-        builder.append(set.getTime());
-        builder.append(getSetType(set)).append(NEWLINE_);
-
-        return builder.toString();
-    }
-
     private static String printCardioSet(CardioSet set, int setNumber) {
 
         StringBuilder builder = new StringBuilder(setNumber + COLON_);
@@ -84,6 +74,16 @@ public class WorkoutPrinter {
         return builder.toString();
     }
 
+    private static String printTimeSet(TimeSet set, int setNumber) {
+
+        StringBuilder builder = new StringBuilder(setNumber + COLON_);
+
+        builder.append(set.getTime());
+        builder.append(getSetType(set)).append(NEWLINE_);
+
+        return builder.toString();
+    }
+
     private static String printWeightSet(WeightSet set, int setNumber) {
 
         StringBuilder builder = new StringBuilder(setNumber + COLON_);
@@ -96,23 +96,23 @@ public class WorkoutPrinter {
         return builder.toString();
     }
 
-    // Enumeration printers
-    private static String getWeightType(WeightSet set) {
-
-        return switch (set.getWeightType()) {
-
-            case ASSISTED -> MINUS_;
-            case WEIGHTED -> PLUS_;
-            default -> EMPTY_;
-        };
-    }
-
+    // Enum printers
     private static String getSetType(Set set) {
 
         return switch (set.getSetType()) {
 
             case DROP -> DROP_;
             case FAILURE -> FAIL_;
+            default -> EMPTY_;
+        };
+    }
+
+    private static String getWeightType(WeightSet set) {
+
+        return switch (set.getWeightType()) {
+
+            case ASSISTED -> MINUS_;
+            case WEIGHTED -> PLUS_;
             default -> EMPTY_;
         };
     }

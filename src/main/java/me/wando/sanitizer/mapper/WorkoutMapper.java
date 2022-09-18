@@ -74,19 +74,8 @@ public class WorkoutMapper {
             case CARDIO -> mapCardioSet(input);
             case REPS_ONLY -> mapRepsSet(input);
 
-            default -> mapWeightAndRepsSet(input);
+            default -> mapWeightSet(input);
         };
-    }
-
-    private static TimeSet mapTimeSet(String input) {
-
-        int startIndex = input.indexOf(TIME_ONLY) + 1;
-        int endIndex = input.length() - 1;
-
-        String time = input.substring(startIndex, endIndex);
-        SetType setType = getSetType(input);
-
-        return new TimeSet(setType, time);
     }
 
     private static CardioSet mapCardioSet(String input) {
@@ -113,7 +102,18 @@ public class WorkoutMapper {
         return new RepsSet(setType, reps);
     }
 
-    private static WeightSet mapWeightAndRepsSet(String input) {
+    private static TimeSet mapTimeSet(String input) {
+
+        int startIndex = input.indexOf(TIME_ONLY) + 1;
+        int endIndex = input.length() - 1;
+
+        String time = input.substring(startIndex, endIndex);
+        SetType setType = getSetType(input);
+
+        return new TimeSet(setType, time);
+    }
+
+    private static WeightSet mapWeightSet(String input) {
 
         int startIndex = 2;
         int splitIndex = input.indexOf(SPLIT);
@@ -127,7 +127,7 @@ public class WorkoutMapper {
         return new WeightSet(setType, reps, weight, weightType);
     }
 
-    // Enumeration mappers
+    // Enum mappers
     private static SetType getSetType(String input) {
 
         int setTypeIndex = input.length() - 1;

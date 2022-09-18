@@ -1,13 +1,11 @@
 package me.wando.sanitizer.printer;
 
-import static java.lang.System.lineSeparator;
-
 // All printer markers have trailing underscore, and can be any length
 public class PrinterMarkers {
 
     // Base
     public static final String EMPTY_   = "";
-    public static final String NEWLINE_ = lineSeparator();
+    public static final String NEWLINE_ = System.lineSeparator();
 
     // Set types
     public static final String DROP_    = " D";
