@@ -13,9 +13,8 @@ import static me.wando.sanitizer.printer.PrinterMarkers.*;
 
 public class WorkoutPrinter {
 
-    public static String printWorkout(String rawWorkout) {
+    public static String printWorkout(Workout workout) {
 
-        Workout workout = mapWorkout(rawWorkout);
         StringBuilder builder = new StringBuilder(workout.getTitle() + NEWLINE_ + NEWLINE_);
 
         for (Exercise exercise : workout.getExercises()) {

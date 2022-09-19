@@ -15,7 +15,7 @@ import java.util.List;
 
 import static java.lang.Double.parseDouble;
 import static java.lang.Integer.parseInt;
-import static me.wando.sanitizer.Processor.WorkoutProcessor.processWorkout;
+import static me.wando.sanitizer.processor.WorkoutProcessor.processWorkout;
 import static me.wando.sanitizer.mapper.MapperMarkers.*;
 
 public class WorkoutMapper {

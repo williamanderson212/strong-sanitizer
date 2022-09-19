@@ -5,7 +5,7 @@ public class PrinterMarkers {
 
     // Base
     public static final String EMPTY_   = "";
-    public static final String NEWLINE_ = System.lineSeparator();
+    public static final String NEWLINE_ = "\n";
 
     // Set types
     public static final String DROP_    = " D";

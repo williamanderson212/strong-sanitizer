@@ -1,11 +1,11 @@
-package me.wando.sanitizer.Processor;
+package me.wando.sanitizer.processor;
 
 // All processor markers have leading underscore, and can be any length
 public class ProcessorMarkers {
 
     // Base
     public static final String _EMPTY         = "";
-    public static final String _NEWLINE       = System.lineSeparator();
+    public static final String _NEWLINE       = "\n";
     public static final String _SPACE         = " ";
 
     // Line markers

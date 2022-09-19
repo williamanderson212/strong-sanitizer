@@ -1,9 +1,9 @@
-package me.wando.sanitizer.Processor;
+package me.wando.sanitizer.processor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static me.wando.sanitizer.Processor.ProcessorMarkers.*;
+import static me.wando.sanitizer.processor.ProcessorMarkers.*;
 import static me.wando.sanitizer.mapper.MapperMarkers.*;
 
 public class WorkoutProcessor {
